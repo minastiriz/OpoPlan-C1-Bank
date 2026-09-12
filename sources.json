@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "gva-58-26",
+      "title": "Convocatoria 58/26 - C1-01 Generalitat Valenciana",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110206&id_etapa=1",
+      "expectedText": "58/26",
+      "purpose": "Detectar nuevas fases, cuestionarios y plantillas oficiales"
+    },
+    {
+      "id": "gva-64-25",
+      "title": "Convocatoria 64/25 - C1-01 Generalitat Valenciana",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104155&id_info=info_basica",
+      "expectedText": "64/25",
+      "purpose": "Detectar documentos oficiales de examen"
+    },
+    {
+      "id": "boe-legislacion-consolidada",
+      "title": "API de legislación consolidada del BOE",
+      "url": "https://www.boe.es/datosabiertos/faq/consolidada.php",
+      "expectedText": "Consolidada",
+      "purpose": "Vigilar la disponibilidad de la fuente normativa oficial"
+    }
+  ]
+}

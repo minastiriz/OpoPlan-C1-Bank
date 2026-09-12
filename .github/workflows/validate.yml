@@ -1,0 +1,16 @@
+name: Validar contenido firmado
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/validate_release.py
+      - run: python scripts/monitor_sources.py
