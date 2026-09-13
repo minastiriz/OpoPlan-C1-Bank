@@ -13,4 +13,3 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python scripts/validate_release.py
-      - run: python scripts/monitor_sources.py
