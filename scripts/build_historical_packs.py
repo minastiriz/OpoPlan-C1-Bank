@@ -52,6 +52,7 @@ EXAMS = (
     },
     {
         "id": "gva-c1-01-64-25",
+        "version": 2,
         "title": "Convocatoria 64/25 - primer ejercicio",
         "pdf": "64-25-1.pdf",
         "key_page": 0,
@@ -61,6 +62,63 @@ EXAMS = (
         "source_url": "https://sede.gva.es/descarregues/2026/02/135758-Plantilla_de_respuestas_y_cuestionarios.pdf",
     },
 )
+
+
+def expand_topic_map(groups: dict[tuple[str, int], tuple[int, ...]], expected: range) -> dict[int, tuple[str, int]]:
+    """Expand a manually reviewed map and refuse gaps or duplicate assignments."""
+    result: dict[int, tuple[str, int]] = {}
+    for topic, numbers in groups.items():
+        for number in numbers:
+            if number in result:
+                raise ValueError(f"La pregunta {number} tiene dos temas asignados")
+            result[number] = topic
+    if set(result) != set(expected):
+        missing = sorted(set(expected) - set(result))
+        extra = sorted(set(result) - set(expected))
+        raise ValueError(f"Mapa editorial incompleto; faltan {missing} y sobran {extra}")
+    return result
+
+
+# Revisión editorial contra el Anexo I de la Orden 26/2025 (DOGV 10135 bis).
+# No se usa una palabra aislada para decidir el tema: las 110 preguntas del examen
+# quedan asignadas explícitamente y cualquier hueco hace fallar la construcción.
+TOPIC_MAP_64_25 = expand_topic_map({
+    ("Parte especial", 1): (1, 2, 3, 4, 53),
+    ("Parte especial", 2): (5, 6, 7, 54),
+    ("Parte especial", 3): (8, 9, 10, 11, 12),
+    ("Parte especial", 4): (13, 14, 15),
+    ("Parte especial", 5): (16, 17, 18, 59, 60),
+    ("Parte especial", 6): (19, 20, 21, 22, 23, 51, 55, 56),
+    ("Parte especial", 7): (24, 25, 26, 57),
+    ("Parte especial", 8): (27, 28, 29),
+    ("Parte especial", 9): (30, 31, 32, 33, 34),
+    ("Parte especial", 10): (35, 36, 37, 38, 52, 58, 61),
+    ("Parte especial", 11): (39, 41, 44, 62),
+    ("Parte especial", 12): (40, 42, 43, 45, 50, 63, 64, 65),
+    ("Parte especial", 13): (46, 47),
+    ("Parte especial", 14): (48, 49),
+    ("Parte especial", 15): (66,),
+    ("Parte especial", 16): (67, 78),
+    ("Parte especial", 17): (68,),
+    ("Parte especial", 18): (69, 70, 79),
+    ("Parte especial", 19): (71, 72),
+    ("Parte especial", 20): (73, 80),
+    ("Parte especial", 21): (74,),
+    ("Parte especial", 22): (75, 77),
+    ("Parte especial", 23): (76,),
+    ("Parte general", 1): (81, 82, 83, 84),
+    ("Parte general", 2): (85, 86, 87, 88, 89, 90),
+    ("Parte general", 3): (91, 92),
+    ("Parte general", 4): (93, 94),
+    ("Parte general", 5): (95, 96),
+    ("Parte general", 6): (97, 98, 99),
+    ("Parte general", 7): (100, 101, 102, 103),
+    ("Parte general", 8): (104, 105),
+    ("Parte general", 9): (106, 107),
+    ("Parte general", 10): (108,),
+    ("Parte general", 11): (109,),
+    ("Parte general", 12): (110,),
+}, range(1, 111))
 
 
 def clean(value: str) -> str:
@@ -85,13 +143,16 @@ def extract_answers(text: str, expected_count: int) -> dict[int, int]:
 
 
 def classify(exam_id: str, number: int, prompt: str) -> tuple[str, int]:
+    if exam_id == "gva-c1-01-64-25":
+        return TOPIC_MAP_64_25[number]
+
     # The official exams change order between calls. These boundaries keep every
     # question attached to a valid current syllabus topic without changing its text.
     general_starts = {
         "gva-c1-01-7-22": (1, 35),
         "gva-c1-01-151-21": (58, 91),
         "gva-c1-01-27-24": (57, 91),
-        "gva-c1-01-64-25": (82, 111),
+        "gva-c1-01-64-25": (81, 111),
     }
     start, end = general_starts[exam_id]
     is_general = start <= number < end
@@ -208,7 +269,7 @@ def build(exam: dict) -> pathlib.Path:
     pack = {
         "schemaVersion": 1,
         "id": exam["id"],
-        "version": 1,
+        "version": exam.get("version", 1),
         "title": exam["title"],
         "origin": "official_exam",
         "sourceTitle": f"Generalitat Valenciana - cuestionario y plantilla de {exam['title']}",
@@ -219,7 +280,7 @@ def build(exam: dict) -> pathlib.Path:
         "verifiedAt": "2026-09-13T00:00:00Z",
         "questions": questions,
     }
-    output = ROOT / "packs" / f"{exam['id']}-v1.json"
+    output = ROOT / "packs" / f"{exam['id']}-v{pack['version']}.json"
     output.write_text(json.dumps(pack, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     return output
 
