@@ -2,6 +2,13 @@
   "schemaVersion": 1,
   "sources": [
     {
+      "id": "gva-12-23",
+      "title": "Convocatoria 12/23 - C1-01 Generalitat Valenciana",
+      "url": "https://www.gva.es/es/inicio/atencion_ciudadano/buscadores/busc_empleo_publico/detalle_oposiciones?_es_gva_es_siac_portlet_SiacDetalleEmpleoPublicoNuevoGVA_accion=pdf&_es_gva_es_siac_portlet_SiacDetalleEmpleoPublicoNuevoGVA_codigo=93056&p_p_cacheability=cacheLevelPage&p_p_id=es_gva_es_siac_portlet_SiacDetalleEmpleoPublicoNuevoGVA&p_p_lifecycle=2&p_p_mode=view&p_p_state=normal",
+      "expectedText": "12/23",
+      "purpose": "Vigilar correcciones del cuestionario y de la plantilla oficial incorporados al banco"
+    },
+    {
       "id": "gva-58-26",
       "title": "Convocatoria 58/26 - C1-01 Generalitat Valenciana",
       "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110206&id_etapa=1",

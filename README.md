@@ -12,6 +12,12 @@ Repositorio público de contenido para OpoPlan C1. No contiene el código de la 
 
 El manifiesto público está en `manifest.json`. La aplicación descarga únicamente versiones superiores a las ya instaladas y sigue funcionando sin conexión.
 
+## Contenido actual
+
+- 40 preguntas oficiales del ejercicio C1-01-EDU/23.
+- 90 preguntas oficiales de la convocatoria 12/23, C1-01.
+- Total: 130 preguntas oficiales verificadas.
+
 ## Fuentes vigiladas
 
 La automatización semanal comprueba cambios en las páginas oficiales registradas en `sources.json`. Un cambio hace fallar la ejecución para que sea revisado; no genera ni publica preguntas automáticamente.

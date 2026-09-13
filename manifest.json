@@ -11,6 +11,16 @@
       "signature": "MEUCIQDbW8G3yIJdBdMotqw4MwbyiYun31S1pSDxDPyzskQiqwIgOGEe1UVSyWb3h3kmbTgVeHW0vfF33OlaBerCvBhsoIE=",
       "questionCount": 40,
       "publishedAt": "2023-05-15T00:00:00Z"
+    },
+    {
+      "id": "gva-c1-01-12-23",
+      "version": 1,
+      "title": "Convocatoria 12/23 - ejercicio único",
+      "url": "https://minastiriz.github.io/OpoPlan-C1-Bank/packs/gva-c1-01-12-23-v1.json",
+      "sha256": "dc68e9ae468ef896d9f17e7bec83773d2d808f0b2d13d85c44ee27456195dd4b",
+      "signature": "MEQCIFNkAkM4hDqEePvEM3M8YT2Nl6waV6XrV1M9ra4Hj8R1AiAA7ooDrb+tZu0y5aMd/L9PpO5UrWOQdX17WBmS35Osmw==",
+      "questionCount": 90,
+      "publishedAt": "2023-12-18T00:00:00Z"
     }
   ]
 }
