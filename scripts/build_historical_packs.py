@@ -12,9 +12,6 @@ import pathlib
 import re
 import unicodedata
 
-import pdfplumber
-
-
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PDF_ROOT = ROOT.parent / "tmp" / "pdfs" / "historical"
 
@@ -239,6 +236,8 @@ def extract_questions(text: str, expected_count: int) -> list[tuple[int, str, li
 
 
 def build(exam: dict) -> pathlib.Path:
+    import pdfplumber
+
     pdf_path = PDF_ROOT / exam["pdf"]
     with pdfplumber.open(pdf_path) as reader:
         answers = extract_answers(
