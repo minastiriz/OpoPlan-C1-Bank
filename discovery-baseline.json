@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-13T12:31:26Z",
+  "calls": [
+    {
+      "employmentId": 62448,
+      "title": "Cuerpo C1-01, subgrupo C1, sector administración general, Administrativo de la administración de la Generalitat, turno de promoción interna, Convocatoria 3/14.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=62448"
+    },
+    {
+      "employmentId": 62736,
+      "title": "241-B. Cuerpo de Administrativo de la Administración de la Generalitat C1-01. Acceso para funcionarios de carrera y Personal contratado laboral del personal del Consell de la Generalitat.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=62736"
+    },
+    {
+      "employmentId": 67928,
+      "title": "332-B. Cuerpo C1-01, administrativos/as de la administración de la Generalitat. PI (OPE-14)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=67928"
+    },
+    {
+      "employmentId": 68174,
+      "title": "Convocatoria 37/16: pruebas selectivas de acceso a los siguientes cuerpos: C1-01 Cuerpo Administrativo, C1-03 Cuerpo de Especialistas en Educación Especial, C1-04 Cuerpo de Especialistas en Educación Infantil, C1-12 Cuerpo de Especialistas en Atención Sociosanitaria (Promoción interna)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68174"
+    },
+    {
+      "employmentId": 68628,
+      "title": "Convocatoria pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat C1-01, turno de acceso libre y turno de personas con diversidad funcional. Convocatoria 34/16.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68628"
+    },
+    {
+      "employmentId": 68640,
+      "title": "Convocatoria pruebas selectivas de acceso al cuerpo Administrativo de la Administración de la Generalitat C1-01, turno de promoción interna y turno promoción interna de personas con diversidad funcional, Convocatoria 35/16.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68640"
+    },
+    {
+      "employmentId": 69520,
+      "title": "Convocatoria 73/2018. Concurso de traslados de la administración general, de los cuerpos C1-01 administrativo y C2-01 auxiliar, de la Administración de la Generalitat.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=69520"
+    },
+    {
+      "employmentId": 71668,
+      "title": "Convocatoria 45/2019. Cuerpo C1-01 administrativo/a de la Administración de la Generalitat",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=71668"
+    },
+    {
+      "employmentId": 72569,
+      "title": "Convocatoria de pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat, C1-01, sector administración general, convocatoria 67/18, turno libre general y personas con diversidad funcional. (PROCESO DE ESTABILIZACIÓN)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=72569"
+    },
+    {
+      "employmentId": 72572,
+      "title": "Convocatoria de pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat, C1-01, sector administración general, convocatoria 68/18, turno de promoción interna y personas con diversidad funcional. (Proceso de estabilización)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=72572"
+    },
+    {
+      "employmentId": 76664,
+      "title": "435-B. Cuerpo C1-01 administrativos de la Administración (OEP-16)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=76664"
+    },
+    {
+      "employmentId": 83072,
+      "title": "Convocatoria 67/2022. Puestos de trabajo, de naturaleza funcionarial, de administración especial, del cuerpo C1-01, administrativo o administrativa de la Administración de la Generalitat",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=83072"
+    },
+    {
+      "employmentId": 84070,
+      "title": "Convocatoria 66/2022. Puestos de trabajo de jefaturas, de naturaleza funcionarial, de administración general, de los cuerpos A2-01 superior de gestión, C1-01 administrativo y C2-01 auxiliar, de la Administración de la Generalitat.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84070"
+    },
+    {
+      "employmentId": 84221,
+      "title": "C1-01-EDU/23: Bolsa de empleo temporal del cuerpo C1-01 Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84221"
+    },
+    {
+      "employmentId": 84633,
+      "title": "Pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat, C1-01, sector administración general, convocatoria 8/22, promoción interna, personas con diversidad funcional y con enfermedad mental",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84633"
+    },
+    {
+      "employmentId": 84657,
+      "title": "Pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat, C1-01, sector administración general, convocatoria 7/22, turno libre general, personas con diversidad funcional y enfermedad mental",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84657"
+    },
+    {
+      "employmentId": 84926,
+      "title": "Proceso excepcional de estabilización por el sistema de concurso de méritos - Convocatoria 3/21: C1-01 Administrativo de la administración de la Generalitat",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84926"
+    },
+    {
+      "employmentId": 86180,
+      "title": "Convocatoria 151/21. Pruebas selectivas de acceso al cuerpo C1-01 administrativo de la administración de la Generalitat, sector administración general, turno libre general, personas con diversidad funcional y enfermedad mental",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=86180"
+    },
+    {
+      "employmentId": 87283,
+      "title": "Convocatoria 196/21. Pruebas selectivas de acceso al cuerpo C1-01 Administrativo de la administración de la Generalitat, sector administración general, turno de promoción interna, personas con diversidad funcional y enfermedad mental",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=87283"
+    },
+    {
+      "employmentId": 93056,
+      "title": "Convocatoria 12/23. Proceso selectivo número 1: Cuerpo administrativo, C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93056"
+    },
+    {
+      "employmentId": 93123,
+      "title": "Convocatoria 36/23. Proceso selectivo número 1: Cuerpo administrativo, C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93123"
+    },
+    {
+      "employmentId": 93401,
+      "title": "Convocatoria 36/23. Proceso selectivo número 2: APT-C1-01-01, de agentes tributarios",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93401"
+    },
+    {
+      "employmentId": 93403,
+      "title": "Convocatoria 12/23. Proceso selectivo número 2: APT-C1-01-01, de agentes tributarios.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93403"
+    },
+    {
+      "employmentId": 94698,
+      "title": "AUT-207/23. C1-01. Cuerpo administrativo (Val, Al, Cas). Bolsas 435, 332, 176, 241, 568",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=94698"
+    },
+    {
+      "employmentId": 95624,
+      "title": "648-B. C1-01. Asistencia al contribuyente IRPF. LIBRE (Convocatoria 648/23)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=95624"
+    },
+    {
+      "employmentId": 96998,
+      "title": "677-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al cuerpo administrativo de la Administración de la Generalitat, C1-01, sector administración general, convocatorias 7/22 y 8 22, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo/escala C1-01. (correspondencia Ley 4/21, de 16 de abril C1-01.)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=96998"
+    },
+    {
+      "employmentId": 98192,
+      "title": "Convocatoria 27/24. Proceso selectivo número 1: cuerpo administrativo, C1-01. Turno libre",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98192"
+    },
+    {
+      "employmentId": 98193,
+      "title": "Convocatoria 27/24. Proceso selectivo número 2: APT-C1-01-01, de agentes tributarios",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98193"
+    },
+    {
+      "employmentId": 98194,
+      "title": "Convocatoria 28/24. Proceso selectivo número 1: cuerpo administrativo, C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98194"
+    },
+    {
+      "employmentId": 98195,
+      "title": "Convocatoria 28/24. Proceso selectivo número 2: APT-C1-01-01, de agentes tributarios",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98195"
+    },
+    {
+      "employmentId": 98770,
+      "title": "679-B. Cuerpo C1-01. Administrativo. Modalidad Estabilización (OEP-2017/2018)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98770"
+    },
+    {
+      "employmentId": 100855,
+      "title": "Convocatoria 111/2024 para la provisión de puestos de trabajo de naturaleza funcionarial, de administración general, de la APT C1-01-01 agentes tributarios, de la Administración de la Generalitat",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=100855"
+    },
+    {
+      "employmentId": 100879,
+      "title": "Convocatoria 110/2024 para la provisión de puestos de trabajo de naturaleza funcionarial, de administración general, del cuerpo C1-01 administrativos, de la Administración de la Generalitat",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=100879"
+    },
+    {
+      "employmentId": 103896,
+      "title": "Convocatoria 65/25. Pruebas selectivas de acceso al cuerpo C1-01. Administrativo. PROMOCIÓN INTERNA",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=103896"
+    },
+    {
+      "employmentId": 104048,
+      "title": "760-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo administrativo C1-01, y APT-C1-01-01 de agentes tributarios, del sector administración especial, convocatorias 12/23 i 36/23, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo y APT-C1-01-01.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104048"
+    },
+    {
+      "employmentId": 104049,
+      "title": "761-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo administrativo C1-01, y APT-C1-01-01 de agentes tributarios, del sector administración especial, convocatorias 27/24 i 28/24, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo y APT-C1-01-01.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104049"
+    },
+    {
+      "employmentId": 104155,
+      "title": "Convocatoria 64/25. Pruebas selectivas de acceso al cuerpo C1-01. Administrativo. TURNO LIBRE",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104155"
+    },
+    {
+      "employmentId": 105804,
+      "title": "765-B. Cuerpo APT-C1-01-01. Agentes tributarios. Modalidad Ordinaria (OEP 2023)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=105804"
+    },
+    {
+      "employmentId": 106393,
+      "title": "766-B. Cuerpo C1-07 (antes APT-C1-01-01). Agentes tributarios de la Generalitat. Modalidad ordinaria. (OPE 2024)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=106393"
+    },
+    {
+      "employmentId": 108241,
+      "title": "ADC 24/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108241"
+    },
+    {
+      "employmentId": 108305,
+      "title": "ADC 30/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108305"
+    },
+    {
+      "employmentId": 108429,
+      "title": "ADC 34/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108429"
+    },
+    {
+      "employmentId": 108546,
+      "title": "ADC 35/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108546"
+    },
+    {
+      "employmentId": 108700,
+      "title": "ADC 39/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108700"
+    },
+    {
+      "employmentId": 108857,
+      "title": "ADC 42/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=108857"
+    },
+    {
+      "employmentId": 109192,
+      "title": "ADC 47/25-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=109192"
+    },
+    {
+      "employmentId": 109515,
+      "title": "ADC 01/26-SSOC. C1-01 Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=109515"
+    },
+    {
+      "employmentId": 109921,
+      "title": "ADC 03/26-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=109921"
+    },
+    {
+      "employmentId": 110098,
+      "title": "ADC 04/26-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110098"
+    },
+    {
+      "employmentId": 110206,
+      "title": "Convocatoria 58/26. Pruebas selectivas de acceso al Cuerpo administrativo, C1-01. TURNO LIBRE",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110206"
+    },
+    {
+      "employmentId": 110236,
+      "title": "Convocatoria 59/26. Pruebas selectivas de acceso al Cuerpo administrativo, C1-01. PROMOCIÓN INTERNA",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110236"
+    },
+    {
+      "employmentId": 110302,
+      "title": "ADC 05/26-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110302"
+    },
+    {
+      "employmentId": 110367,
+      "title": "889-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo Administrativo, C1-01, del sector administración general, convocatorias 151/21 i 196/21, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110367"
+    },
+    {
+      "employmentId": 110368,
+      "title": "890-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo Administrativo, C1-01, del sector administración general, convocatorias 12/23 i 36/23, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110368"
+    },
+    {
+      "employmentId": 110369,
+      "title": "891-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo Administrativo, C1-01, del sector administración general, convocatorias 27/24 i 28/24, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo C1-01",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110369"
+    },
+    {
+      "employmentId": 110524,
+      "title": "804-B. Cuerpo C1-01. Administrativo. Modalidad Estabilización (OEP-2020 y 2021)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=110524"
+    },
+    {
+      "employmentId": 111009,
+      "title": "ADC 08/26-SSOC. C1-01. Administrativo/a",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=111009"
+    },
+    {
+      "employmentId": 112029,
+      "title": "ADC 98/26 C1-01. Cuerpo Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=112029"
+    },
+    {
+      "employmentId": 112621,
+      "title": "H/26. Anuncio de cesión de datos para un puesto del cuerpo C1-01 administrativo del CONSORCIO DE MUSEOS DE LA COMUNIDAD VALENCIANA",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=112621"
+    },
+    {
+      "employmentId": 112901,
+      "title": "ADC 132/26 C1-01. Cuerpo Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=112901"
+    },
+    {
+      "employmentId": 113115,
+      "title": "AUT 153/26 C1-01. Cuerpo Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113115"
+    },
+    {
+      "employmentId": 113350,
+      "title": "I/26. Anuncio de cesión de datos para un puesto del cuerpo C1-01 administrativo de FERROCARRILS DE LA GENERALITAT VALENCIANA (FGV)",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113350"
+    },
+    {
+      "employmentId": 113706,
+      "title": "ADC 171/26 C1-01. Cuerpo Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113706"
+    },
+    {
+      "employmentId": 113757,
+      "title": "AUT 173/26 C1-01. Cuerpo Administrativo",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113757"
+    },
+    {
+      "employmentId": 113884,
+      "title": "913-L. Listado de personas aprobadas del segundo ejercicio de las pruebas selectivas de acceso al Cuerpo Administrativo, C1-01, del sector administración general, convocatorias 64/25, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo C1-01.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113884"
+    },
+    {
+      "employmentId": 113885,
+      "title": "914-L. Listado de personas aprobadas del primer ejercicio de las pruebas selectivas de acceso al Cuerpo Administrativo, C1-01, del sector administración general, convocatorias 64/25 i 65/25, para el nombramiento de personal funcionario interino y/o nombramiento provisional por mejora de empleo del cuerpo C1-01.",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=113885"
+    }
+  ],
+  "stages": [
+    {
+      "employmentId": 68174,
+      "stageId": 9,
+      "title": "Cuestionario del ejercicio",
+      "published": "04-04-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68174&id_etapa=9"
+    },
+    {
+      "employmentId": 68628,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "17-06-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68628&id_etapa=9"
+    },
+    {
+      "employmentId": 68628,
+      "stageId": 12,
+      "title": "Cuestionario del ejercicio",
+      "published": "16-09-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68628&id_etapa=12"
+    },
+    {
+      "employmentId": 68628,
+      "stageId": 18,
+      "title": "Plantilla de respuestas del 2.º ejercicio",
+      "published": "28-10-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68628&id_etapa=18"
+    },
+    {
+      "employmentId": 68640,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "17-06-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68640&id_etapa=8"
+    },
+    {
+      "employmentId": 68640,
+      "stageId": 13,
+      "title": "Plantilla de respuestas del 2.º ejercicio",
+      "published": "28-10-2019",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=68640&id_etapa=13"
+    },
+    {
+      "employmentId": 72569,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "11-02-2022",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=72569&id_etapa=8"
+    },
+    {
+      "employmentId": 72569,
+      "stageId": 10,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "11-03-2022",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=72569&id_etapa=10"
+    },
+    {
+      "employmentId": 72572,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "11-02-2022",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=72572&id_etapa=8"
+    },
+    {
+      "employmentId": 84221,
+      "stageId": 7,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "15-05-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84221&id_etapa=7"
+    },
+    {
+      "employmentId": 84633,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "20-02-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84633&id_etapa=9"
+    },
+    {
+      "employmentId": 84657,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "20-02-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=84657&id_etapa=9"
+    },
+    {
+      "employmentId": 86180,
+      "stageId": 11,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "13-05-2024",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=86180&id_etapa=11"
+    },
+    {
+      "employmentId": 87283,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "13-05-2024",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=87283&id_etapa=9"
+    },
+    {
+      "employmentId": 93056,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "18-12-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93056&id_etapa=8"
+    },
+    {
+      "employmentId": 93123,
+      "stageId": 7,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "18-12-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93123&id_etapa=7"
+    },
+    {
+      "employmentId": 93401,
+      "stageId": 7,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "18-12-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93401&id_etapa=7"
+    },
+    {
+      "employmentId": 93403,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "18-12-2023",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=93403&id_etapa=8"
+    },
+    {
+      "employmentId": 98192,
+      "stageId": 11,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "27-01-2025",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98192&id_etapa=11"
+    },
+    {
+      "employmentId": 98193,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "27-01-2025",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98193&id_etapa=8"
+    },
+    {
+      "employmentId": 98194,
+      "stageId": 12,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "27-01-2025",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98194&id_etapa=12"
+    },
+    {
+      "employmentId": 98195,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "27-01-2025",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=98195&id_etapa=9"
+    },
+    {
+      "employmentId": 103896,
+      "stageId": 8,
+      "title": "Plantilla de respuestas del ejercicio",
+      "published": "02-02-2026",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=103896&id_etapa=8"
+    },
+    {
+      "employmentId": 104155,
+      "stageId": 9,
+      "title": "Plantilla de respuestas del 1.er ejercicio",
+      "published": "02-02-2026",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104155&id_etapa=9"
+    },
+    {
+      "employmentId": 104155,
+      "stageId": 15,
+      "title": "Cuestionario del ejercicio",
+      "published": "11-05-2026",
+      "url": "https://sede.gva.es/es/detall-ocupacio-publica?id_emp=104155&id_etapa=15"
+    }
+  ],
+  "documents": [
+    "https://sede.gva.es/descarregues/2023/05/25990-PLANTILLA-respuesta_C1.pdf",
+    "https://sede.gva.es/descarregues/2023/05/25992-EXAMEN_C1_CAST.pdf",
+    "https://sede.gva.es/descarregues/2023/12/48650-PLANTILLA_Y_CUESTIONARIO_CONV._12_23_TRIBUTARIOS.pdf",
+    "https://sede.gva.es/descarregues/2023/12/48690-PLANTILLA_Y_CUESTIONARIO_CONV._12_23_ADMON_GENERAL.pdf",
+    "https://sede.gva.es/descarregues/2023/12/48692-PLANTILLA_Y_CUESTIONARIO_CONV._36_23_AMDON_GENERAL.pdf",
+    "https://sede.gva.es/descarregues/2023/12/48694-PLANTILLA_Y_CUESTIONARIO_CONV._36_23_TRIBUTARIOS.pdf",
+    "https://sede.gva.es/descarregues/2024/05/65956-BPR_mas_ejercicios_151_21.pdf",
+    "https://sede.gva.es/descarregues/2024/05/65958-BPR_mas_ejercicios_196_21.pdf",
+    "https://sede.gva.es/descarregues/2025/01/97630-PLANTILLA_RESPUESTAS_Y_CUESTIONARIOS_27_24_TL.pdf",
+    "https://sede.gva.es/descarregues/2025/01/97636-PLANTILLA_RESPUESTAS_Y_CUESTIONARIOS_27_24_PI.pdf",
+    "https://sede.gva.es/descarregues/2025/01/97669-Plantilla_de_respuestas_y_cuestionarios_28_24_PI.pdf",
+    "https://sede.gva.es/descarregues/2025/01/97673-Plantilla_de_respuestas_y_cuestionarios_27_24_TL.pdf",
+    "https://sede.gva.es/descarregues/2026/02/135758-Plantilla_de_respuestas_y_cuestionarios.pdf",
+    "https://sede.gva.es/descarregues/2026/02/135764-Plantilla_de_respuestas_y_cuestionarios.pdf",
+    "https://sede.gva.es/descarregues/2026/05/146996-64-25_2º_EJERCICIO.pdf",
+    "https://www.gva.es/downloads/publicados/EP/34_16_CastellanoPlantilla.pdf",
+    "https://www.gva.es/downloads/publicados/EP/35_16_CastellanoPlantilla.pdf",
+    "https://www.gva.es/downloads/publicados/EP/37_16_Examen_y_respuestas.pdf",
+    "https://www.gva.es/downloads/publicados/EP/COVID_19_PLANTILLAS_Y_CUESTIONARIOS_67_68.pdf",
+    "https://www.gva.es/downloads/publicados/EP/Examen_y_planilla_respuestas_4_septiembre.pdf",
+    "https://www.gva.es/downloads/publicados/EP/PLANTILLA_CS_Y_EXAMEN.pdf",
+    "https://www.gva.es/downloads/publicados/EP/PLANTILLA__Y_EXAMEN_1_35_16.pdf",
+    "https://www.gva.es/downloads/publicados/EP/Plantillas_y_Cuestionarios_67_68_TODO.pdf",
+    "https://www.gva.es/downloads/publicados/EP/plantilla_y_cuestionario_7_8_22.pdf"
+  ]
+}

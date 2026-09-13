@@ -15,12 +15,20 @@ El manifiesto público está en `manifest.json`. La aplicación descarga únicam
 ## Contenido actual
 
 - 40 preguntas oficiales del ejercicio C1-01-EDU/23.
+- 90 preguntas oficiales de la convocatoria 7/22, C1-01.
 - 90 preguntas oficiales de la convocatoria 12/23, C1-01.
-- Total: 130 preguntas oficiales verificadas.
+- 90 preguntas oficiales de la convocatoria 151/21, C1-01.
+- 90 preguntas oficiales de la convocatoria 27/24, C1-01.
+- 110 preguntas oficiales del primer ejercicio de la convocatoria 64/25, C1-01.
+- Total: 510 preguntas oficiales verificadas.
+
+Los paquetes históricos reproducen la redacción y respuesta oficial de la fecha del examen. La normativa puede haber cambiado después; conservar el origen y la fecha permite distinguir entrenamiento histórico de contenido vigente.
 
 ## Fuentes vigiladas
 
-La automatización semanal comprueba cambios en las páginas oficiales registradas en `sources.json`. Un cambio hace fallar la ejecución para que sea revisado; no genera ni publica preguntas automáticamente.
+La automatización diaria consulta el buscador oficial de empleo público con varias búsquedas C1-01, descubre identificadores de convocatorias, inspecciona sus etapas de cuestionario/plantilla y registra los PDF oficiales. La línea base actual cubre 66 resultados C1-01, 25 etapas de examen y 24 documentos. Una novedad abre o actualiza un aviso de revisión en GitHub y adjunta un informe JSON; nunca genera ni publica preguntas automáticamente.
+
+El script `scripts/build_historical_packs.py` vuelve a construir los cuatro paquetes históricos a partir de sus PDF oficiales y se detiene si falta numeración, alguna opción o una respuesta de plantilla. `scripts/validate_release.py` exige al menos 500 preguntas, texto completo, identificadores únicos, SHA-256 y firma ECDSA válida.
 
 ## Reutilización
 

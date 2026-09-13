@@ -2,16 +2,72 @@ name: Vigilar fuentes oficiales
 
 on:
   schedule:
-    - cron: "17 7 * * 1"
+    - cron: "17 7 * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Comprobar fuentes registradas
-        run: python scripts/monitor_sources.py
+      - name: Comprobar fuentes y descubrir convocatorias/documentos
+        id: monitor
+        run: python scripts/monitor_sources.py --report discovery-report.json
+      - name: Conservar informe de vigilancia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: informe-vigilante-c1-01
+          path: discovery-report.json
+      - name: Abrir o actualizar aviso de revisión
+        if: always() && steps.monitor.outputs.discoveries == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('discovery-report.json', 'utf8'));
+            const marker = '[Vigilante C1-01] Novedades oficiales pendientes de revisión';
+            const lines = [
+              `Comprobación: ${report.checkedAt}`,
+              '',
+              `- Convocatorias nuevas: ${report.discoveries.calls.length}`,
+              `- Etapas de cuestionario/plantilla nuevas: ${report.discoveries.stages.length}`,
+              `- Documentos PDF nuevos: ${report.discoveries.documents.length}`,
+              '',
+              'El vigilante solo descubre y avisa: ningún documento se publica automáticamente.',
+              '',
+              '### Convocatorias',
+              ...report.discoveries.calls.slice(0, 20).map(item => `- [${item.title}](${item.url})`),
+              '',
+              '### Etapas',
+              ...report.discoveries.stages.slice(0, 20).map(item => `- [${item.title} — ${item.published}](${item.url})`),
+              '',
+              '### Documentos',
+              ...report.discoveries.documents.slice(0, 30).map(url => `- ${url}`),
+            ];
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find(issue => issue.title === marker && !issue.pull_request);
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: lines.join('\n'),
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: marker,
+                body: lines.join('\n'),
+              });
+            }

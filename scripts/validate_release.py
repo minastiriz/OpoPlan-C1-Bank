@@ -13,6 +13,8 @@ manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
 if manifest["schemaVersion"] != 1:
     raise ValueError("Versión de manifiesto no compatible")
 
+all_question_ids = set()
+total_questions = 0
 for descriptor in manifest["packs"]:
     filename = pathlib.Path(descriptor["url"]).name
     path = ROOT / "packs" / filename
@@ -29,8 +31,17 @@ for descriptor in manifest["packs"]:
     ids = [question["id"] for question in pack["questions"]]
     if len(ids) != len(set(ids)):
         raise ValueError(f"Identificadores duplicados: {filename}")
+    duplicated_across_packs = all_question_ids.intersection(ids)
+    if duplicated_across_packs:
+        raise ValueError(f"Identificadores repetidos entre paquetes: {sorted(duplicated_across_packs)}")
+    all_question_ids.update(ids)
+    total_questions += len(ids)
     if not all(len(question["options"]) == 4 and 0 <= question["correctIndex"] < 4 for question in pack["questions"]):
         raise ValueError(f"Opciones inválidas: {filename}")
+    if not all(question["prompt"].strip() and all(option.strip() for option in question["options"]) for question in pack["questions"]):
+        raise ValueError(f"Texto vacío: {filename}")
+    if any("�" in question["prompt"] or any("�" in option for option in question["options"]) for question in pack["questions"]):
+        raise ValueError(f"Caracteres de extracción dañados: {filename}")
 
     openssl = shutil.which("openssl")
     if openssl:
@@ -53,3 +64,7 @@ for descriptor in manifest["packs"]:
     else:
         raise RuntimeError("OpenSSL no está disponible para comprobar la firma")
     print(f"OK {filename}: {len(ids)} preguntas, SHA-256 y firma válidos")
+
+if total_questions < 500:
+    raise ValueError(f"El banco debe mantener al menos 500 preguntas revisadas; contiene {total_questions}")
+print(f"OK banco completo: {total_questions} preguntas oficiales revisadas")
