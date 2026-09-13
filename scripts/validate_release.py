@@ -15,6 +15,11 @@ if manifest["schemaVersion"] != 1:
 
 all_question_ids = set()
 total_questions = 0
+expected_topics = (
+    {("Parte general", number) for number in range(1, 13)}
+    | {("Parte especial", number) for number in range(1, 24)}
+)
+topic_counts = {topic: 0 for topic in expected_topics}
 for descriptor in manifest["packs"]:
     filename = pathlib.Path(descriptor["url"]).name
     path = ROOT / "packs" / filename
@@ -42,6 +47,11 @@ for descriptor in manifest["packs"]:
         raise ValueError(f"Texto vacío: {filename}")
     if any("�" in question["prompt"] or any("�" in option for option in question["options"]) for question in pack["questions"]):
         raise ValueError(f"Caracteres de extracción dañados: {filename}")
+    for question in pack["questions"]:
+        topic = (question["part"], question["topicNumber"])
+        if topic not in expected_topics:
+            raise ValueError(f"Tema fuera del temario vigente en {filename}: {topic}")
+        topic_counts[topic] += 1
 
     openssl = shutil.which("openssl")
     if openssl:
@@ -67,4 +77,12 @@ for descriptor in manifest["packs"]:
 
 if total_questions < 500:
     raise ValueError(f"El banco debe mantener al menos 500 preguntas revisadas; contiene {total_questions}")
+missing_topics = [topic for topic, count in topic_counts.items() if count == 0]
+if missing_topics:
+    raise ValueError(f"Hay temas sin preguntas disponibles: {sorted(missing_topics)}")
+low_coverage = sorted(
+    ((part, number, count) for (part, number), count in topic_counts.items() if count < 5),
+    key=lambda item: (item[0], item[1]),
+)
 print(f"OK banco completo: {total_questions} preguntas oficiales revisadas")
+print(f"OK cobertura: {len(topic_counts)} temas con preguntas; cobertura baja (<5): {low_coverage}")
