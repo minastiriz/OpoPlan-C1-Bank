@@ -1,6 +1,6 @@
 import unittest
 
-from build_historical_packs import TOPIC_MAP_64_25, classify
+from scripts.build_historical_packs import TOPIC_MAP_64_25, classify
 
 
 class HistoricalTopicMappingTests(unittest.TestCase):
