@@ -21,7 +21,7 @@ USER_AGENT = "OpoPlan-C1-Official-Source-Monitor/2.0"
 
 def fetch(url: str) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=45) as response:
+    with urllib.request.urlopen(request, timeout=25) as response:
         return response.read().decode("utf-8", errors="replace")
 
 
@@ -87,7 +87,7 @@ def parse_documents(body: str) -> list[str]:
     return sorted(documents)
 
 
-def discover(registry: dict) -> tuple[dict, list[str]]:
+def discover(registry: dict, baseline: dict | None = None) -> tuple[dict, list[str]]:
     errors: list[str] = []
     calls_by_id: dict[int, dict] = {}
     for catalog in registry["discovery"]["catalogs"]:
@@ -100,28 +100,64 @@ def discover(registry: dict) -> tuple[dict, list[str]]:
 
     calls = sorted(calls_by_id.values(), key=lambda item: item["employmentId"])
 
-    def inspect_call(call: dict) -> tuple[list[dict], list[str], list[str]]:
-        local_errors: list[str] = []
+    known_call_ids = {item["employmentId"] for item in (baseline or {}).get("calls", [])}
+    tracked_call_ids = {item["employmentId"] for item in (baseline or {}).get("stages", [])}
+    calls_to_inspect = calls if baseline is None else [
+        call for call in calls
+        if call["employmentId"] in tracked_call_ids
+        or call["employmentId"] not in known_call_ids
+        or (
+            re.search(r"convocatoria|pruebas\s+selectivas|proceso\s+selectivo", call["title"], re.IGNORECASE)
+            and not re.search(r"listado\s+de\s+personas\s+aprobadas", call["title"], re.IGNORECASE)
+        )
+    ]
+
+    def inspect_call(call: dict) -> tuple[list[dict], list[str]]:
         try:
             body = fetch(call["url"])
             stages = parse_stages(body, call["employmentId"])
         except Exception as error:
-            return [], [], [f"convocatoria {call['employmentId']}: {error}"]
-        documents: set[str] = set()
-        for stage in stages:
-            try:
-                documents.update(parse_documents(fetch(stage["url"])))
-            except Exception as error:
-                local_errors.append(f"etapa {call['employmentId']}/{stage['stageId']}: {error}")
-        return stages, sorted(documents), local_errors
+            return [], [f"convocatoria {call['employmentId']}: {error}"]
+        return stages, []
 
     stages: list[dict] = []
-    documents: set[str] = set()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-        for local_stages, local_documents, local_errors in executor.map(inspect_call, calls):
+        for local_stages, local_errors in executor.map(inspect_call, calls_to_inspect):
             stages.extend(local_stages)
-            documents.update(local_documents)
             errors.extend(local_errors)
+
+    known_stage_keys = {
+        (item["employmentId"], item["stageId"], item["published"])
+        for item in (baseline or {}).get("stages", [])
+    }
+    stages_to_inspect = stages if baseline is None else [
+        stage for stage in stages
+        if (stage["employmentId"], stage["stageId"], stage["published"]) not in known_stage_keys
+    ]
+
+    def inspect_stage(stage: dict) -> tuple[list[str], str | None]:
+        try:
+            return parse_documents(fetch(stage["url"])), None
+        except Exception as error:
+            return [], f"etapa {stage['employmentId']}/{stage['stageId']}: {error}"
+
+    documents: set[str] = set((baseline or {}).get("documents", []))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        for local_documents, local_error in executor.map(inspect_stage, stages_to_inspect):
+            documents.update(local_documents)
+            if local_error:
+                errors.append(local_error)
+
+    if baseline is not None:
+        unchanged_stages = [
+            item for item in baseline.get("stages", [])
+            if item["employmentId"] in {call["employmentId"] for call in calls}
+        ]
+        current_keys = {(item["employmentId"], item["stageId"], item["published"]) for item in stages}
+        stages.extend(
+            item for item in unchanged_stages
+            if (item["employmentId"], item["stageId"], item["published"]) not in current_keys
+        )
 
     snapshot = {
         "schemaVersion": 1,
@@ -151,15 +187,18 @@ def compare(snapshot: dict, baseline: dict) -> dict:
 
 
 def check_known_sources(registry: dict) -> list[str]:
-    failures = []
-    for source in registry["sources"]:
+    def check(source: dict) -> str | None:
         try:
             body = fetch(source["url"])
             if source["expectedText"].casefold() not in body.casefold():
-                failures.append(f"{source['id']}: no aparece el marcador esperado")
+                return f"{source['id']}: no aparece el marcador esperado"
         except Exception as error:
-            failures.append(f"{source['id']}: {error}")
-    return failures
+            return f"{source['id']}: {error}"
+        return None
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        results = executor.map(check, registry["sources"])
+    return [failure for failure in results if failure]
 
 
 def write_github_outputs(path: str | None, discoveries: dict, failures: list[str]) -> None:
@@ -178,8 +217,9 @@ def main() -> int:
     args = parser.parse_args()
 
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    baseline = None if args.refresh_baseline else json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
     source_failures = check_known_sources(registry)
-    snapshot, discovery_failures = discover(registry)
+    snapshot, discovery_failures = discover(registry, baseline)
     failures = source_failures + discovery_failures
 
     if args.refresh_baseline:
@@ -197,7 +237,7 @@ def main() -> int:
         )
         return 0
 
-    baseline = json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
+    assert baseline is not None
     discoveries = compare(snapshot, baseline)
     report = {
         "checkedAt": snapshot["generatedAt"],
