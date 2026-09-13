@@ -19,6 +19,7 @@ PDF_ROOT = ROOT.parent / "tmp" / "pdfs" / "historical"
 EXAMS = (
     {
         "id": "gva-c1-01-7-22",
+        "version": 2,
         "title": "Convocatoria 7/22 - ejercicio único",
         "pdf": "7-8-22.pdf",
         "key_page": 0,
@@ -118,6 +119,44 @@ TOPIC_MAP_64_25 = expand_topic_map({
 }, range(1, 111))
 
 
+# Revisión editorial del cuestionario 7/22 contra las mismas materias del temario
+# vigente. Se conserva literalmente el examen histórico y solo se normaliza el
+# tema al que aporta evidencia dentro de la aplicación.
+TOPIC_MAP_7_22 = expand_topic_map({
+    ("Parte general", 1): (1,),
+    ("Parte general", 2): (2, 3, 4, 5, 8),
+    ("Parte general", 3): (6, 7, 9),
+    ("Parte general", 4): (10,),
+    ("Parte general", 5): (11, 12),
+    ("Parte general", 6): (13, 14),
+    ("Parte general", 7): (15, 16, 18),
+    ("Parte general", 8): (17, 19),
+    ("Parte general", 9): (20, 21),
+    ("Parte general", 10): (22, 23, 24, 25, 26),
+    ("Parte general", 11): (27, 28, 29, 30),
+    ("Parte general", 12): (31, 32, 33, 34),
+    ("Parte especial", 1): (35, 36, 37, 38),
+    ("Parte especial", 2): (39, 40, 41, 42, 43),
+    ("Parte especial", 3): (44, 45, 46, 47, 48, 49, 50),
+    ("Parte especial", 4): (51, 52, 53),
+    ("Parte especial", 5): (55, 56, 57),
+    ("Parte especial", 6): (58, 59, 60, 61, 62, 63),
+    ("Parte especial", 7): (64, 65),
+    ("Parte especial", 8): (66, 67, 68),
+    ("Parte especial", 9): (69, 70, 71),
+    ("Parte especial", 10): (72, 73, 74, 75, 76, 77),
+    ("Parte especial", 11): (54, 78, 79, 80, 81, 82, 85),
+    ("Parte especial", 12): (83, 84, 86, 87, 88),
+    ("Parte especial", 13): (89, 90),
+}, range(1, 91))
+
+
+MANUAL_TOPIC_MAPS = {
+    "gva-c1-01-7-22": TOPIC_MAP_7_22,
+    "gva-c1-01-64-25": TOPIC_MAP_64_25,
+}
+
+
 def clean(value: str) -> str:
     value = unicodedata.normalize("NFC", value)
     value = value.replace("\u00ad", "").replace("ﬁ", "fi").replace("ﬂ", "fl")
@@ -140,8 +179,8 @@ def extract_answers(text: str, expected_count: int) -> dict[int, int]:
 
 
 def classify(exam_id: str, number: int, prompt: str) -> tuple[str, int]:
-    if exam_id == "gva-c1-01-64-25":
-        return TOPIC_MAP_64_25[number]
+    if manual_map := MANUAL_TOPIC_MAPS.get(exam_id):
+        return manual_map[number]
 
     # The official exams change order between calls. These boundaries keep every
     # question attached to a valid current syllabus topic without changing its text.

@@ -24,11 +24,11 @@
     },
     {
       "id": "gva-c1-01-7-22",
-      "version": 1,
+      "version": 2,
       "title": "Convocatoria 7/22 - ejercicio único",
-      "url": "https://minastiriz.github.io/OpoPlan-C1-Bank/packs/gva-c1-01-7-22-v1.json",
-      "sha256": "296df905f10858d4570276ca3ccb4c135c69217926054d970b5c421c542468f3",
-      "signature": "MEYCIQDuxYr6Ofvr1yp67o8kykOHN+kd/hn/DDURwef2O8+/eQIhAIOdfKbWuILfZat3pRqHoNs7VCUV/y94QLQasbnV4Uj4",
+      "url": "https://minastiriz.github.io/OpoPlan-C1-Bank/packs/gva-c1-01-7-22-v2.json",
+      "sha256": "b5e2c85ef22bd7a28bf11f49640cf67f7b8ca6bbeb9127163aecd956ed4ccfe4",
+      "signature": "MEUCIQCZeEg+x+B2DbVc+5dsGFIkbX0zXyNDhoUyfBcQPNc3+AIgU7rmsVdaKh2INTe9U5hjGIgnZizhU+ZRaBa4zbZtHmw=",
       "questionCount": 90,
       "publishedAt": "2023-02-20T00:00:00Z"
     },
