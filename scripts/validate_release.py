@@ -2,6 +2,8 @@ import base64
 import hashlib
 import json
 import pathlib
+import os
+import shutil
 import subprocess
 import tempfile
 
@@ -30,12 +32,24 @@ for descriptor in manifest["packs"]:
     if not all(len(question["options"]) == 4 and 0 <= question["correctIndex"] < 4 for question in pack["questions"]):
         raise ValueError(f"Opciones inválidas: {filename}")
 
-    with tempfile.NamedTemporaryFile() as signature_file:
-        signature_file.write(base64.b64decode(descriptor["signature"]))
-        signature_file.flush()
+    openssl = shutil.which("openssl")
+    if openssl:
+        with tempfile.NamedTemporaryFile() as signature_file:
+            signature_file.write(base64.b64decode(descriptor["signature"]))
+            signature_file.flush()
+            subprocess.run(
+                [openssl, "dgst", "-sha256", "-verify", str(ROOT / "public-key.pem"),
+                 "-signature", signature_file.name, str(path)],
+                check=True,
+            )
+    elif os.name == "nt":
         subprocess.run(
-            ["openssl", "dgst", "-sha256", "-verify", str(ROOT / "public-key.pem"),
-             "-signature", signature_file.name, str(path)],
+            ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass",
+             "-File", str(ROOT / "scripts" / "verify_signature.ps1"),
+             "-DataPath", str(path), "-SignatureBase64", descriptor["signature"],
+             "-PublicKeyPath", str(ROOT / "public-key.pem")],
             check=True,
         )
+    else:
+        raise RuntimeError("OpenSSL no está disponible para comprobar la firma")
     print(f"OK {filename}: {len(ids)} preguntas, SHA-256 y firma válidos")
