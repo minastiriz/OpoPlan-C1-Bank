@@ -26,7 +26,7 @@ Los paquetes históricos reproducen la redacción y respuesta oficial de la fech
 
 ## Fuentes vigiladas
 
-La automatización diaria consulta el buscador oficial de empleo público con varias búsquedas C1-01, descubre identificadores de convocatorias, inspecciona sus etapas de cuestionario/plantilla y registra los PDF oficiales. La línea base actual cubre 66 resultados C1-01, 25 etapas de examen y 24 documentos. Una novedad abre o actualiza un aviso de revisión en GitHub y adjunta un informe JSON; nunca genera ni publica preguntas automáticamente.
+La automatización local diaria `Vigilar C1-01 GVA` consulta el buscador oficial de empleo público con varias búsquedas C1-01, descubre identificadores de convocatorias, inspecciona sus etapas de cuestionario/plantilla y registra los PDF oficiales. Se ejecuta desde el equipo autorizado porque la Sede GVA no responde a las direcciones de red de GitHub Actions. La línea base actual cubre 66 resultados C1-01, 25 etapas de examen y 24 documentos. Solo una novedad real o un fallo persistente genera un aviso en Codex; nunca se generan ni publican preguntas automáticamente.
 
 El script `scripts/build_historical_packs.py` vuelve a construir los cuatro paquetes históricos a partir de sus PDF oficiales y se detiene si falta numeración, alguna opción o una respuesta de plantilla. `scripts/validate_release.py` exige al menos 500 preguntas, texto completo, identificadores únicos, SHA-256 y firma ECDSA válida.
 
