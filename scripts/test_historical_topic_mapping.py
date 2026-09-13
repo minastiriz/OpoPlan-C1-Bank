@@ -2,6 +2,7 @@ import unittest
 
 from scripts.build_historical_packs import (
     TOPIC_MAP_7_22,
+    TOPIC_MAP_27_24,
     TOPIC_MAP_64_25,
     TOPIC_MAP_151_21,
     classify,
@@ -17,6 +18,9 @@ class HistoricalTopicMappingTests(unittest.TestCase):
 
     def test_151_21_map_covers_every_question_exactly_once(self):
         self.assertEqual(set(TOPIC_MAP_151_21), set(range(1, 91)))
+
+    def test_27_24_map_covers_every_question_exactly_once(self):
+        self.assertEqual(set(TOPIC_MAP_27_24), set(range(1, 91)))
 
     def test_examples_found_during_physical_device_review(self):
         expected = {
@@ -73,6 +77,25 @@ class HistoricalTopicMappingTests(unittest.TestCase):
         for number, topic in expected.items():
             with self.subTest(question=number):
                 self.assertEqual(classify("gva-c1-01-151-21", number, ""), topic)
+
+    def test_27_24_boundary_and_budget_examples(self):
+        expected = {
+            1: ("Parte especial", 1),
+            5: ("Parte especial", 2),
+            18: ("Parte especial", 5),
+            29: ("Parte especial", 8),
+            32: ("Parte especial", 9),
+            39: ("Parte especial", 11),
+            45: ("Parte especial", 12),
+            52: ("Parte especial", 13),
+            54: ("Parte especial", 14),
+            57: ("Parte general", 1),
+            78: ("Parte general", 8),
+            90: ("Parte general", 12),
+        }
+        for number, topic in expected.items():
+            with self.subTest(question=number):
+                self.assertEqual(classify("gva-c1-01-27-24", number, ""), topic)
 
 
 if __name__ == "__main__":

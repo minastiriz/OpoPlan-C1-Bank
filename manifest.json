@@ -44,11 +44,11 @@
     },
     {
       "id": "gva-c1-01-27-24",
-      "version": 1,
+      "version": 2,
       "title": "Convocatoria 27/24 - primer ejercicio",
-      "url": "https://minastiriz.github.io/OpoPlan-C1-Bank/packs/gva-c1-01-27-24-v1.json",
-      "sha256": "fc7cd5b12a4fc9467fe6e3ed7709226cf1e78c219414f5f68115c4738f6bdd6c",
-      "signature": "MEUCIQCNLpy/TC9HvPbR1AaRuHynUy2MKSHVCDVeyF0kaYagJAIgGg17j5Hb7C/FEocvoo0iG1m4FcExVdxBIKRVWzq5Ajc=",
+      "url": "https://minastiriz.github.io/OpoPlan-C1-Bank/packs/gva-c1-01-27-24-v2.json",
+      "sha256": "9dea0f2122c60986d8a8364fbcf3312a5b0ebfe680bf725b0ab405c557a77f45",
+      "signature": "MEUCIGh3aJ06KBYXoimVCZ0M99PVp5V8tMPIYi03Gd90u+D/AiEA7uHb8TNngZkRw9qizKz5/gcig6FIw6X7KkzuZEwNq8U=",
       "questionCount": 90,
       "publishedAt": "2025-01-27T00:00:00Z"
     },
