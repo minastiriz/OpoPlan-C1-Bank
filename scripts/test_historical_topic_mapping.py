@@ -1,6 +1,11 @@
 import unittest
 
-from scripts.build_historical_packs import TOPIC_MAP_7_22, TOPIC_MAP_64_25, classify
+from scripts.build_historical_packs import (
+    TOPIC_MAP_7_22,
+    TOPIC_MAP_64_25,
+    TOPIC_MAP_151_21,
+    classify,
+)
 
 
 class HistoricalTopicMappingTests(unittest.TestCase):
@@ -9,6 +14,9 @@ class HistoricalTopicMappingTests(unittest.TestCase):
 
     def test_64_25_map_covers_every_question_exactly_once(self):
         self.assertEqual(set(TOPIC_MAP_64_25), set(range(1, 111)))
+
+    def test_151_21_map_covers_every_question_exactly_once(self):
+        self.assertEqual(set(TOPIC_MAP_151_21), set(range(1, 91)))
 
     def test_examples_found_during_physical_device_review(self):
         expected = {
@@ -48,6 +56,23 @@ class HistoricalTopicMappingTests(unittest.TestCase):
         for number, topic in expected.items():
             with self.subTest(question=number):
                 self.assertEqual(classify("gva-c1-01-7-22", number, ""), topic)
+
+    def test_151_21_boundary_and_budget_examples(self):
+        expected = {
+            1: ("Parte especial", 1),
+            4: ("Parte especial", 2),
+            10: ("Parte especial", 3),
+            35: ("Parte especial", 9),
+            44: ("Parte especial", 11),
+            50: ("Parte especial", 12),
+            55: ("Parte especial", 13),
+            57: ("Parte general", 1),
+            78: ("Parte general", 8),
+            90: ("Parte general", 12),
+        }
+        for number, topic in expected.items():
+            with self.subTest(question=number):
+                self.assertEqual(classify("gva-c1-01-151-21", number, ""), topic)
 
 
 if __name__ == "__main__":

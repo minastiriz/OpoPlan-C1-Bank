@@ -30,6 +30,7 @@ EXAMS = (
     },
     {
         "id": "gva-c1-01-151-21",
+        "version": 2,
         "title": "Convocatoria 151/21 - ejercicio único",
         "pdf": "151-21.pdf",
         "key_page": 0,
@@ -151,8 +152,38 @@ TOPIC_MAP_7_22 = expand_topic_map({
 }, range(1, 91))
 
 
+TOPIC_MAP_151_21 = expand_topic_map({
+    ("Parte especial", 1): (1, 2, 3),
+    ("Parte especial", 2): (4, 5, 6, 7, 8, 9),
+    ("Parte especial", 3): (10, 11, 12, 13, 14, 15, 16),
+    ("Parte especial", 4): (17, 18, 19),
+    ("Parte especial", 5): (20, 21, 22),
+    ("Parte especial", 6): (23, 24, 25, 26, 27, 28),
+    ("Parte especial", 7): (29, 30, 31),
+    ("Parte especial", 8): (32, 33, 34),
+    ("Parte especial", 9): (35, 36, 37),
+    ("Parte especial", 10): (38, 39, 40, 41, 42, 43),
+    ("Parte especial", 11): (44, 45, 46, 47, 48, 49),
+    ("Parte especial", 12): (50, 51, 52, 53, 54),
+    ("Parte especial", 13): (55, 56),
+    ("Parte general", 1): (57, 58),
+    ("Parte general", 2): (59, 60),
+    ("Parte general", 3): (61, 62, 63),
+    ("Parte general", 4): (64, 65, 66),
+    ("Parte general", 5): (67, 68, 69),
+    ("Parte general", 6): (70, 71, 72, 73, 74),
+    ("Parte general", 7): (75, 76, 77),
+    ("Parte general", 8): (78, 79),
+    ("Parte general", 9): (80, 81),
+    ("Parte general", 10): (82, 83, 84),
+    ("Parte general", 11): (85, 86),
+    ("Parte general", 12): (87, 88, 89, 90),
+}, range(1, 91))
+
+
 MANUAL_TOPIC_MAPS = {
     "gva-c1-01-7-22": TOPIC_MAP_7_22,
+    "gva-c1-01-151-21": TOPIC_MAP_151_21,
     "gva-c1-01-64-25": TOPIC_MAP_64_25,
 }
 

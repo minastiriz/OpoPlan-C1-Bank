@@ -22,10 +22,10 @@ El manifiesto público está en `manifest.json`. La aplicación descarga únicam
 - 110 preguntas oficiales del primer ejercicio de la convocatoria 64/25, C1-01.
 - Total: 510 preguntas oficiales verificadas.
 
-Las versiones 2 de los paquetes 7/22 y 64/25 incorporan una asignación editorial
-explícita de sus 90 y 110 preguntas al temario oficial de la Orden 26/2025. La
-construcción falla si una pregunta queda sin tema o recibe dos, evitando que una
-heurística silenciosa la envíe por defecto a E1 o G1.
+Las versiones 2 de los paquetes 7/22, 151/21 y 64/25 incorporan una asignación
+editorial explícita de sus 90, 90 y 110 preguntas al temario oficial de la Orden
+26/2025. La construcción falla si una pregunta queda sin tema o recibe dos,
+evitando que una heurística silenciosa la envíe por defecto a E1 o G1.
 
 Los paquetes históricos reproducen la redacción y respuesta oficial de la fecha del examen. La normativa puede haber cambiado después; conservar el origen y la fecha permite distinguir entrenamiento histórico de contenido vigente.
 
